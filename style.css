@@ -1,0 +1,334 @@
+:root {
+  --bg0: #f4efe1;
+  --bg1: #efe2c3;
+  --paper: #fffdf7;
+  --ink: #1e1d1a;
+  --muted: #4f4a40;
+  --line: #d5c9ae;
+  --accent: #873e23;
+  --accent2: #275f65;
+  --good: #1a7d55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "LXGW WenKai", "STKaiti", "PingFang SC", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 20%, #fff6df 0%, transparent 40%),
+    radial-gradient(circle at 90% 0%, #ecd8c0 0%, transparent 45%),
+    linear-gradient(160deg, var(--bg0) 0%, var(--bg1) 100%);
+}
+
+.wrap {
+  width: min(980px, 94vw);
+  margin: 26px auto 56px;
+}
+
+.book-cover {
+  background:
+    linear-gradient(135deg, rgba(254, 249, 238, 0.94), rgba(255, 248, 231, 0.94));
+  border: 2px solid #bea679;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(49, 36, 13, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-cover::after {
+  content: "第壹卷";
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border: 1px solid #bfa88a;
+  color: #826541;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.cover-tag {
+  margin: 0;
+  color: #75592f;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+}
+
+h1 {
+  margin: 10px 0;
+  line-height: 1.18;
+  font-size: clamp(30px, 6vw, 48px);
+}
+
+.cover-sub {
+  margin: 0;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.cover-desc {
+  margin: 12px 0 0;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.panel {
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(58, 41, 14, 0.1);
+}
+
+.chapter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed #bc9c71;
+  border-radius: 999px;
+  padding: 5px 11px;
+  color: #7b5a33;
+  background: #fff7e9;
+  font-size: 13px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.desc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.barrage {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.barrage span {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid #d8cab0;
+  background: #fff;
+  color: #694e2d;
+}
+
+.question {
+  margin-top: 14px;
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+
+.question:first-of-type {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.q-title {
+  margin: 0 0 8px;
+  line-height: 1.62;
+}
+
+.q-tag {
+  color: #745f3f;
+  font-size: 13px;
+}
+
+.scale,
+.choices {
+  display: grid;
+  gap: 8px;
+}
+
+.scale {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.choices {
+  grid-template-columns: 1fr;
+}
+
+.opt {
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 9px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.opt input {
+  margin-right: 6px;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+button.primary {
+  background: linear-gradient(120deg, #9b4527, #7f2f18);
+  color: #fff;
+}
+
+button.secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #5d4932;
+}
+
+button.ghost {
+  border: 1px dashed #b39b7b;
+  background: #fff6ea;
+  color: #6f5737;
+}
+
+.stage-card {
+  margin-top: 12px;
+  border: 1px solid #d7c4a6;
+  background: linear-gradient(180deg, #fffaf0, #fff);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.stage-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.stage-sub {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1ebdd;
+  border: 1px solid #d8c3a2;
+  color: #644a26;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.metric {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 11px;
+  background: #fff;
+}
+
+.metric h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.metric .v {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--good);
+}
+
+.metric .small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.box {
+  margin-top: 10px;
+  border-left: 3px solid var(--accent2);
+  background: #f7faf9;
+  padding: 10px;
+  border-radius: 6px;
+  line-height: 1.68;
+}
+
+.list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.share {
+  margin-top: 10px;
+  border: 1px dashed #c4b295;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fffcf5;
+}
+
+.share p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.65;
+}
+
+.notice {
+  margin-top: 10px;
+  background: #fff4ef;
+  border: 1px solid #f0cdbf;
+  border-radius: 10px;
+  padding: 8px 10px;
+  color: #7c3c22;
+  font-size: 13px;
+}
+
+.refs ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.refs li {
+  margin: 5px 0;
+  line-height: 1.65;
+}
+
+a {
+  color: #1253ad;
+  word-break: break-all;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 14px;
+  }
+
+  .scale {
+    grid-template-columns: 1fr;
+  }
+}
